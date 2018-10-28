@@ -90,9 +90,6 @@ def get_library_config(name):
         return
 
     known, unknown = parse_cflags(raw_cflags.decode('utf8'))
-    if unknown:
-        print("pkg-config returned flags we don't understand: {}".format(unknown))
-        exit(1)
 
     return known
 
